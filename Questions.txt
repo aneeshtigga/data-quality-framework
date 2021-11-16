@@ -1,0 +1,9 @@
+1. Are we expecting multiple tables to move from one source to one destination that we should evaluate health for?
+eg. Tables: tab1, tab2, tab3, Source: 's3://bucket_name1/folder1/', Target: 's3://bucket_name2/folder2/'
+
+2. What are the inputs are we expecting from the user?
+eg. Source path, Destination path, Table name/Tables list, Check intervals
+
+
+-------------------------------------------------------------------------------------------------------------------
+

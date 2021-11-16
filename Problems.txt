@@ -1,0 +1,8 @@
+1. Having schema file per table will be useless if tables on target location have transformed columns.
+    SOLUTION: Transformation logic has to be included and then the checks should be performed
+
+2. Sanity checks like row checks will fail if the target data is source data conditionally filtered.
+    eg. select * from src_table where location in ['India', 'Japan', 'Australia']
+    SOLUTION: Transformation logic has to be included and then the checks should be performed
+    
+3. 

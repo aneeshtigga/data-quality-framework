@@ -1,0 +1,38 @@
+{
+  "__meta__": {
+    "tableName": "Test",
+    "timeOfSchemaCreation": "2021-11-11 16:31:15.519944",
+    "typesOfChecks": [
+      "count_check",
+      "data_check"
+    ]
+  },
+  "columns": {
+    "fields": [
+      {
+        "metadata": {},
+        "ordinal": 1,
+        "name": "name",
+        "id_flag": 1,
+        "type": "string",
+        "nullable": false
+      },
+      {
+        "metadata": {},
+        "ordinal": 2,
+        "name": "salary",
+        "id_flag": 0,
+        "type": "long",
+        "nullable": false
+      },
+      {
+        "metadata": {},
+        "ordinal": 3,
+        "name": "dept",
+        "id_flag": 0,
+        "type": "string",
+        "nullable": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+
+Goal:
+  ☐ Build a Data Quality framework (DQF) which can be ported to any ETL pipeline, working with any form of data (Flat files & Relational Databases). The tool will compare the data at the destination with the source at defined intervals and will log the health of an ETL pipeline.
+
+Milestones:
+  Finalizing the architecture:
+    ☐ How the user is suppose to interact with the DQF tool. @doing
+        `The user will provide table name with the source and destination paths`
+    ☐ What is the expected input and the expected output. @doing
+    ☐ What will be the language of choice for the Front-end.
+    ☐ What will be the language of choice for the Back-end. @doing
+        `Python, Shell scripting`
+    ☐ What is the expected size and nature of the data.
+    ☐ Where will the tool be hosted.
+    ☐ Define architecture level workflow.
+    ☐ Data format DQF currently supports. @doing
+        `JSON, CSV, Parquet, JDBC tables`
+  Pre-coding prep:
+    ☐ Standardize a code template and a linting tool.
+    ☐ Document the 3rd party packages required.
+    ☐ Document the platform on which the code is based off of and will be initaliy tested on.
+    ☐ For Python coding, adhere to guidelines mentioned here https://google.github.io/styleguide/pyguide.html.
+    ☐ Define code level workflow.
+  Back-end (dev):
+    ☐ Take Input parameters from the user (location details, table names, type of data).
+    ☐ Establish connection to the source data.
+    ☐ Establish connection to the target data.
+    ☐ Normalize the data.
+    ☐ Run the checks.
+    ☐ Log the results.
+  Back-end (dev 2):
+    ☐ Create separate modules to process different data types.
+    ☐ Automate the check on intervals.
+    ☐ Write hosting configuration.
+    ☐ Create release build.
+  Back-end Testing:
+    Negative:
+      ☐ Check for invalid path.
+      ☐ Check for invalid table name.
+      ☐ Check for invalid data type.
+      ☐ Check for source and target data mismatch.
+      ☐ Check for connection failure.
+    Postive:
+      ☐ Ad-hoc validate the data checks.
+      ☐ Validate the logs.
+  Front-end (dev):
+    ☐ Build an interface to take the input parameters for the DQ job.
+    ☐ Show Progress bars and/or Console ouputs.
+    ☐ Display health per table.
+    ☐ Add an option to ad-hoc run and refresh the table health data.
+    ☐ Store historic health data.
+    ☐ Add an option to export health data to a pdf
+  Front-end Testing:
+    Negative:
+      ☐ Check for invalid inputs.
+    Positive:
+      ☐ Check for back-end invalid path error.
+      ☐ Check for back-end invalid table name error.
+      ☐ Check for back-end invalid data type error.
+      ☐ Check for source and target data match.
+      ☐ Check for source and target data mismatch.
+      ☐ Check for back-end connection failure.
+
+
+Checks:
+  ☐ table check
+  ☐ row count check
+  ☐ column count check
+  ☐ row data check
+  ☐ column name check
+  ☐ data type check
+  ☐ date-time format check
+  ☐ primary key duplicate check
+  ☐ primary key null check
+  ☐ primary key update check (only possible if link table is maintained)
+  ☐ Min check for integer columns
+  ☐ Max check for integer columns
+
+
+Ask:
+  ☐ Need to be able to select the table columns individually and perform any of the checks based on a dynamic input from the user.
+
+
+Job level config:
+  ☐ credential details
+  ☐ source location (s3, azure, local)
+
+Code:
+  ☐ Should able to validate transformed data
+
+
+
+  https://www.talend.com/resources/etl-testing/
+  https://www.datagaps.com/data-testing-concepts/etl-testing/
